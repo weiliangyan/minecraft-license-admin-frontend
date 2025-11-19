@@ -1,0 +1,77 @@
+// ==========================================
+// 授权管理系统设计变量
+// 基于Gemini设计理念，保留原有功能
+// ==========================================
+
+// 核心配色：清新白蓝体系
+$color-primary: #1976d2;        // 深蓝色
+$color-primary-light: #42a5f5;  // 中蓝色
+$color-primary-light-9: #e3f2fd; // 极浅蓝色
+
+$text-primary: #212121;        // 深色文字
+$text-secondary: #424242;      // 次要文字
+$text-muted: #757575;          // 浅色文字
+
+$bg-primary: #ffffff;           // 主背景色
+$bg-secondary: #f5f9ff;        // 次要背景色
+$bg-tertiary: #e8f1ff;         // 第三层背景色
+
+$glass-bg: rgba(255, 255, 255, 0.95); // 毛玻璃效果背景
+$shadow-soft: 0 4px 12px rgba(25, 118, 210, 0.08);
+$shadow-hover: 0 8px 24px rgba(25, 118, 210, 0.15);
+$shadow-blue: 0 4px 20px rgba(25, 118, 210, 0.12);
+
+// UI 特征：圆润与动效
+$border-radius-base: 12px; // 全局大圆角
+$border-radius-small: 8px;
+$border-radius-large: 16px;
+$transition-base: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+$transition-quick: all 0.15s ease;
+
+// 功能色彩
+$color-success: #2e7d32;        // 深绿色
+$color-warning: #ed6c02;        // 深橙色
+$color-danger: #d32f2f;         // 深红色
+$color-info: #455a64;           // 深灰色
+
+// 渐变色
+$gradient-primary: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+$gradient-bg: #ffffff;
+$gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 249, 255, 0.9) 100%);
+$gradient-hover: linear-gradient(135deg, #f5f9ff 0%, #e8f1ff 100%);
+
+// 暗色主题
+$dark-bg-primary: #1a1a1a;
+$dark-bg-secondary: #2d2d2d;
+$dark-border: #3d3d3d;
+
+// 动画 Mixin
+@mixin click-active {
+  transition: $transition-quick;
+  cursor: pointer;
+  &:active {
+    transform: scale(0.96);
+  }
+}
+
+@mixin hover-lift {
+  transition: $transition-base;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-hover;
+  }
+}
+
+@mixin glass-effect {
+  background: $glass-bg;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: $shadow-soft;
+}
+
+// 响应式断点
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+$breakpoint-xl: 1920px;
